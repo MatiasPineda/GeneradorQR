@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Generador QR para redes WIFI</h1>
+<section>
+    <div>
+        <label for="ssid">SSID</label>
+    </div>
+    <div class="form-group">
+        <input type="text" id="ssid" placeholder="SSID" required>
+    </div>
+    <div>
+        <label for="encryption"></label>
+    </div>
+    <div>
+        <label for="encryption">Encryption</label>
+    </div>
+    <div class="form-group">
+        <select name="encryption" id="encryption">
+            <option value="WPA">WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">None</option>
+        </select>
+    </div>
+    <div>
+        <label for="pass">Password</label>
+    </div>
+    <div class="form-group">
+        <input type="text" id="pass" placeholder="Pass" required>
+    </div>
+    <div class="form-group">
+        <label for="hidden">Hidden</label>
+        <input type="checkbox" id="hidden">
+    </div>
+    <div class="form-group">
+        <button id="generate" onclick="generateQR()" class="btn">Generate</button>
+    </div>
+</section>
+<div id="qrcode"></div>
+
+<script type="text/javascript" src="qrcode.min.js"></script>
+<script type="text/javascript" src="generateQR.js"></script>
+
+</body>
+</html>
