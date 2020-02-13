@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <h1>Generador QR para redes WIFI</h1>
-<section>
-    <div>
-        <div>
-            <label for="ssid">SSID</label>
-        </div>
-        <div>
-            <input type="text" id="ssid" placeholder="SSID" required>
-        </div>
-    </div>
+<div class="content">
+    <div id="formbox">
+        <form id=form" class="form" onsubmit="return false">
+            <div>
+                <div>
+                    <label for="ssid">SSID</label>
+                </div>
+                <div>
+                    <input type="text" id="ssid" placeholder="SSID" required>
+                </div>
+            </div>
 
-    <div>
-        <div>
-            <label for="encryption"></label>
-        </div>
-        <div>
-            <label for="encryption">Encryption</label>
-        </div>
-        <div>
-            <select name="encryption" id="encryption">
-                <option value="WPA">WPA/WPA2</option>
-                <option value="WEP">WEP</option>
-                <option value="nopass">None</option>
-            </select>
-        </div>
-    </div>
+            <div>
+                <div>
+                    <label for="encryption"></label>
+                </div>
+                <div>
+                    <label for="encryption">Encryption</label>
+                </div>
+                <div>
+                    <select name="encryption" id="encryption">
+                        <option value="WPA">WPA/WPA2</option>
+                        <option value="WEP">WEP</option>
+                        <option value="nopass">None</option>
+                    </select>
+                </div>
+            </div>
 
-    <div id="showpass">
-        <div>
-            <label for="pass">Password</label>
-        </div>
-        <div>
-            <input type="text" id="pass" placeholder="Pass" required/>
-        </div>
-    </div>
+            <div id="showpass">
+                <div>
+                    <label for="pass">Password</label>
+                </div>
+                <div>
+                    <input type="text" id="pass" placeholder="Pass" required>
+                </div>
+            </div>
 
-    <div>
-        <label for="hidden">Hidden</label>
-        <input type="checkbox" id="hidden">
+            <div>
+                <label for="hidden">Hidden</label>
+                <input type="checkbox" id="hidden">
+            </div>
+            <div>
+                <input type="submit" id="generate" value="Generate">
+            </div>
+        </form>
     </div>
-    <div>
-        <button id="generate" class="btn">Generate</button>
-    </div>
-</section>
-<div id="qrcode"></div>
+    <div id="qrcode"></div>
+</div>
 
 <script type="text/javascript" src="qrcode.min.js"></script>
 <script type="text/javascript" src="generateQR.js"></script>
